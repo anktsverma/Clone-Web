@@ -1,86 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
     <style>
-        *{
-            margin:0px;
-            padding:0px;
-            box-sizing: border-box;
-        }
-        html{
-            font-size: 16px;
-        }
-        a{text-decoration: none;}
-        i{font-size:1.5rem ;}
-        .container{
-            display:flex;
-            flex-direction:column;
-        }
-        .header{
-            display:flex;
-            flex-direction: row;
-            background-color: #fff;
-            align-items: center;
-            justify-content: space-around;
-            width:100%;
-            padding:10px 0px;
-            position:fixed;
-            
-        }
-        .header img{width:200px;}
-        .header a{color:#000;padding:5px;font-family: 'Dosis', sans-serif;font-size:1.1rem;}
-        .slideshow{
-            background:url("img/asset1.jpg") 50% 50% / cover repeat scroll padding-box border-box rgba(0, 0, 0, 0);
-            height:100vh;
-            width:100%;
-            display:flex;
-            align-items:center;
-            justify-content: center;
-            animation-name: changebg;
-            animation-duration: 18s;
-            animation-iteration-count: infinite;
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 16px;
+      }
+      a {
+        text-decoration: none;
+      }
+      i {
+        font-size: 1.5rem;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+      .header {
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(255, 255,255,0.9);
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        padding: 10px 0px;
+        position: fixed;
+      }
+      .header img {
+        width: 200px;
+      }
+      .header a {
+        color: #000;
+        padding: 5px;
+        font-family: "Dosis", sans-serif;
+        font-size: 1.1rem;
+      }
+      .header a:hover{color:#818C90;}
+      .slideshow {
+        background: url("img/asset1.jpg") 50% 50% / cover repeat scroll
+          padding-box border-box rgba(0, 0, 0, 0);
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation-name: changebg;
+        animation-duration: 18s;
+        animation-iteration-count: infinite;
+      }
+    
+      .footer{
+          width:100%;
+          background-color: #262626;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+         font-family: "Hiragino Kaku Gothic Pro", メイリオ, sans-serif;
+          
+      }
+      li{list-style-type: none;line-height:4vh;}
+      .footer ul li a{color:#fff;font-size:0.8rem;}
+      .footerB h2{text-align: center;font-size:1.3rem;}
+      .footerA h2{font-size:1.3rem;}
+      .footerA p{font-size:0.9rem;line-height:3vh;}
+      .footerA a{color:#fff;}
+      .footerA i{padding:10px 10px 0px 0px;font-size:1.8rem;}
+      .footercon{
+          width:70%;
+          display: flex;
+          flex-direction: column;
+          padding:40px 0px;
+      }
+      .footer1{
+          display: flex;
+          justify-content: space-around;
+      }
+      .footer2{padding:40px 0px 0px 0px;}
+      .footer2 p{
+          text-align: center;
+      }
+      .footer2 a{color:#fff;font-size:0.8rem;}
+      .footer2 i{font-size:0.8rem;}
+      .footerB{
+          display: flex;
+          width:50%;
+          justify-content: space-between;
 
-           
+      }
+      .footer a:hover{color:#907A7F;}
+      
+      .collection{display:flex;justify-content: space-between;}
+      @keyframes changebg {
+        0% {
+          background: url("img/asset1.jpg") 50% 50% / cover repeat scroll
+            padding-box border-box rgba(0, 0, 0, 0);
         }
+        20% {
+          background: url("img/asset2.jpg") 50% 50% / cover repeat scroll
+            padding-box border-box rgba(0, 0, 0, 0);
+        }
+        40% {
+          background: url("img/asset3.jpg") 50% 50% / cover repeat scroll
+            padding-box border-box rgba(0, 0, 0, 0);
+        }
+        60% {
+          background: url("img/asset4.jpg") 50% 50% / cover repeat scroll
+            padding-box border-box rgba(0, 0, 0, 0);
+        }
+        80% {
+          background: url("img/asset5.jpg") 50% 50% / cover repeat scroll
+            padding-box border-box rgba(0, 0, 0, 0);
+        }
+        100% {
+          background: url("img/asset6.jpg") 50% 50% / cover repeat scroll
+            padding-box border-box rgba(0, 0, 0, 0);
+        }
+      }
 
-        @keyframes changebg{
-            0%{ background:url("img/asset1.jpg") 50% 50% / cover repeat scroll padding-box border-box rgba(0, 0, 0, 0);}
-            20%{ background:url("img/asset2.jpg") 50% 50% / cover repeat scroll padding-box border-box rgba(0, 0, 0, 0);}
-            40%{ background:url("img/asset3.jpg") 50% 50% / cover repeat scroll padding-box border-box rgba(0, 0, 0, 0);}
-            60%{ background:url("img/asset4.jpg") 50% 50% / cover repeat scroll padding-box border-box rgba(0, 0, 0, 0);}
-            80%{ background:url("img/asset5.jpg") 50% 50% / cover repeat scroll padding-box border-box rgba(0, 0, 0, 0);}
-            100%{ background:url("img/asset6.jpg") 50% 50% / cover repeat scroll padding-box border-box rgba(0, 0, 0, 0);}
-        }
+
+      .news{
+          width:100%;
+          display: flex;
+          justify-content: center;
+          padding:80px 0px;
+      }
+      .newscon{
+          width:70%;
+      }
+      .concept{
+          width:100%;
+          display: flex;
+          justify-content: center;
+          background-color: #D4D9DF;
+      }
+      .conceptcon{
+          width:70%;
+          display: flex;
+          align-items:center;
+      }
+        
+      .img1{
+          width:400px;
+      }
+      .news h2, .conceptcon h2{font-family: "Hiragino Kaku Gothic Pro", sans-serif;font-size:1.3rem;}
+      .conceptcon p{font-family: "Hiragino Kaku Gothic Pro", sans-serif;font-size:0.9rem;opacity: 0.8;line-height:4.5vh;}
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container">
-           <div class="header">
-               <div><img src="img/logo.png" alt="LOGO"></div>
-               <div>
-                   <a href="">CONCEPT</a>
-                   <a href="">COLLECTION</a>
-                   <a href="">ONLINE SHOP</a>
-                   <a href="">SHOP LIST</a>
-                   <a href="">BUYER URL</a>
-                   <a href="">CONTACT</a>
-                   <a href=""><i class="fab fa-facebook-square"></i></a>
-                   <a href=""><i class="fab fa-instagram"></i></a>
-                </div>
-           </div>
+      <div class="header">
+        <div><img src="img/logo.png" alt="LOGO" /></div>
+        <div>
+          <a href="">CONCEPT</a>
+          <a href="">COLLECTION</a>
+          <a href="">ONLINE SHOP</a>
+          <a href="">SHOP LIST</a>
+          <a href="">BUYER URL</a>
+          <a href="">CONTACT</a>
+          <a href=""><i class="fab fa-facebook-square"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
 
-           <div class="slideshow">
-               <div><img src="img/asset7.png" alt=""></div>
-           </div>
+      <div class="slideshow">
+        <div><img src="img/asset7.png" alt="" /></div>
+      </div>
+
+     <div class="news">
+         <div class="newscon">
+           <h2>NEWS</h2>
+         </div>
+     </div>
+    <div class="concept">
+        <div class="conceptcon">
+             <div>
+                 <h2>CONCEPT</h2>
+                <p><br>Japanese label“nunuforme”launched its first collection in 2014 guided by two key words :“fashionable and casual”.Its highly original patterns mean that you’ll see some truly unique cuts that are rarely used in children's fashion.<br>All the products are guaranteed for the best quality.<br>Size : 1Y – 9Y Ladies</p>
+             </div>
+             <div>
+               <img src="img/img1.jpg" alt="" class="img1">
+             </div>
+        </div>
     </div>
 
-</body>
+    <div class="sm-slide">
+
+    </div>
+    
+    <div class="footer">
+        <div class="footercon">
+           <div class="footer1">
+               <div class="footerA">
+                <div><h2>NUIYA DESIGN Co.,Ltd.</h2></div><br>
+                <div><p>4-25-8-202, Arakawa, <br>Arakawa Ku, Tokyo To, 116-0002, Japan<br><br><a href="tel:03-6806-8433">03-6806-8433</a><br><a href="#">info@nunu-web.com</a><br><a href="#">https://nunu-web.com</a></p></div>
+               <div><i class="fab fa-facebook-square"></i> <i class="fab fa-instagram"></i></div>
+            </div>
+               <div class="footerB">
+                <div>
+                    <h2>ABOUT US</h2>
+                    <hr>
+                   <div> <ul>
+                      <li><a href="#">CONCEPT</a></li>
+                      <li><a href="#" target="_blank">ONLINE SHOP</a></li>
+                      <li><a href="#">SHOPLIST</a></li>
+                      <li><a href="#" target="_blank">BUYER URL</a></li>
+                      <li><a href="#">CONTACT</a></li>
+                      <li><a href="#">PRIVACY POLICY</a></li>
+                    </ul></div>
+                  </div>
+
+                  <div>
+                    <h2>COLLECTION</h2>
+                    <hr>
+                    <div class="collection">
+                    <div><ul>
+                      <li><a href="#">2021 S/S</a></li>
+                      <li><a href="#">2020 S/S</a></li>
+                      <li><a href="#">2019 S/S</a></li>
+                      <li><a href="#">2018 S/S</a></li>
+                      <li><a href="#">2017 S/S</a></li>
+                      <li><a href="#">2016 S/S</a></li>
+                      <li><a href="#">2015 S/S</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                      <li><a href="#">2020 A/W</a></li>
+                      <li><a href="#">2019 A/W</a></li>
+                      <li><a href="#">2018 A/W</a></li>
+                      <li><a href="#">2017 A/W</a></li>
+                      <li><a href="#">2016 A/W</a></li>
+                      <li><a href="#">2015 A/W</a></li>
+                      <li><a href="#">2014 A/W</a></li>
+                    </ul>
+                </div>
+                </div>
+                  </div>
+
+                  <div>
+                    <h2>CONTENT</h2>
+                    <hr>
+                    <div>
+                    <ul>
+                      <li><a href="#" target="_blank">FACEBOOK</a></li>
+                      <li><a href="#" target="_blank">INSTAGRAM</a></li>
+                      <li><a href="#">DOWNLOAD</a></li>
+                    </ul>
+                </div>
+                  </div>
+               </div>
+           </div>
+           <div class="footer2">
+            <p><a href="https://nunu-web.com/" title="" rel="home"><i class="far fa-copyright"></i> 2014-2021 NUIYA DESIGN Co.,Ltd.</a></p>
+           </div>
+        </div>
+
+    </div>
+
+    </div>
+  </body>
 </html>
