@@ -13,6 +13,9 @@
       href="https://fonts.googleapis.com/css2?family=Dosis&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <title>Document</title>
     <style>
       * {
@@ -161,6 +164,24 @@
       }
       .news h2, .conceptcon h2{font-family: "Hiragino Kaku Gothic Pro", sans-serif;font-size:1.3rem;}
       .conceptcon p{font-family: "Hiragino Kaku Gothic Pro", sans-serif;font-size:0.9rem;opacity: 0.8;line-height:4.5vh;}
+      .carousel{
+          width:70%;
+          margin:0 15%;
+          padding:40px 0;
+      }
+      .carousel-cell {
+          width:20%;
+          /* margin-right: 10px; */
+          
+      }
+      .carousel-cell::before{
+          display: block;
+      }
+      .carousel-cell img{
+          height: 200px;
+          padding: 10px;
+      }
+
     </style>
   </head>
   <body>
@@ -201,7 +222,19 @@
     </div>
 
     <div class="sm-slide">
-
+      <div class="carousel" data-flickity='{ "groupCells": true ,"autoPlay":true,"wrapAround":true}'>
+        <div class="carousel-cell"><img src="img/asset1.jpg"></div>
+        <div class="carousel-cell"><img src="img/asset2.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="img/asset3.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="img/asset4.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="img/asset5.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="img/asset1.jpg"></div>
+        <div class="carousel-cell"><img src="img/asset1.jpg"></div>
+        <div class="carousel-cell"><img src="img/asset1.jpg"></div>
+        <div class="carousel-cell"><img src="img/asset1.jpg"></div>
+        <div class="carousel-cell"><img src="img/asset1.jpg"></div>
+        <div class="carousel-cell"><img src="img/asset1.jpg"></div>
+      </div>
     </div>
     
     <div class="footer">
