@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <title>Document</title>
+  <style>
+   
+  </style>
+</head>
+
+<body onload="myfunction(array1,0)">
+  <div class="container">
+    <div class="header">
+      <div><img src="img/logo.png" alt="LOGO" /></div>
+      <div id="desk1">
+        <a id="button" class="desk" href="index.html#concept">CONCEPT</a>
+        <a class="desk" href="collection.html">COLLECTION</a>
+        <a class="desk" href="">ONLINE SHOP</a>
+        <a class="desk" href="shoplist.html">SHOP LIST</a>
+        <a class="desk" href="">BUYER URL</a>
+        <a class="desk" href="contact.html">CONTACT</a>
+        <div class="social"><a class="desk" href=""><i class="fab fa-facebook-square"></i></a>
+          <a class="desk" href=""><i class="fab fa-instagram"></i></a>
+        </div>
+        <a href="javascript:void(0);" class="icon hamb">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="shoplist">
+      <div>
+        <h2>Shop List</h2>
+      </div>
+      <div>
+        <button class="btn active" onclick="myfunction(array1,0)">Hokkaido</button>
+        <button class="btn" onclick="myfunction(array2,1)">Touhoku</button>
+        <button class="btn" onclick="myfunction(array3,2)">Hokushinetsu</button>
+        <button class="btn" onclick="myfunction(array4,3)">Kanto</button>
+        <button class="btn" onclick="myfunction(array5,4)">Tokai</button>
+      </div>
+      <table>
+      <tbody id="demo">
+
+      </tbody>
+      </table>
+    </div>
+<script>
+  const array1=[
+   {name:'1FHAT AND U',
+    para:'15-3-1 Nishi, 6-cho Nishi, Chuo-ku, Sapporo-shi, Hokkaido 060-0006',
+    mobile:'0166-73-4177'},
+    {name:'1FHAT AND U',
+    para:'15-3-1 Nishi, 6-cho Nishi, Chuo-ku, Sapporo-shi, Hokkaido 060-0006',
+    mobile:'0166-73-4177'},
+    {name:'1FHAT AND U',
+    para:'15-3-1 Nishi, 6-cho Nishi, Chuo-ku, Sapporo-shi, Hokkaido 060-0006',
+    mobile:'0166-73-4177'}
+  ]
+  const array2=[
+    {name:'2Petit Copan',
+    para:'1 Nishigishi river, Hirosaki City, Aomori 036-8017',
+    mobile:'0172-35-6627'},
+    {name:'2Caracol Records',
+    para:'1F-A Friends, 6-17-22 Higashi-do, Akita City, Akita 010-0003',
+    mobile:'018-874-8492'},
+    {name:'2Sendai Mitsukoshi Main Building 2F New York Runway',
+    para:'4-8-15, 1bancho, Aoba-ku, Sendai City, Miyagi 980-8543',
+    mobile:'022-221-2570'}
+    ]
+    const array3=[
+    {name:'3PRECOCIOUS MARKET',
+    para:'1 Nishigishi river, Hirosaki City, Aomori 036-8017',
+    mobile:'0172-35-6627'},
+    {name:'3PRECOCIOUS MARKET',
+    para:'1 Nishigishi river, Hirosaki City, Aomori 036-8017',
+    mobile:'0172-35-6627'},
+    {name:'3PRECOCIOUS MARKET',
+    para:'1 Nishigishi river, Hirosaki City, Aomori 036-8017',
+    mobile:'0172-35-6627'}
+    ]
+    const array4=[
+    {name:'4Fukudaya Department Store',
+    para:'237 Imaizumicho, Utsunomiya City, Tochigi 321-0962',
+    mobile:'0172-35-6627'},
+    {name:'4Fukudaya Department Store',
+    para:'237 Imaizumicho, Utsunomiya City, Tochigi 321-0962',
+    mobile:'0172-35-6627'},
+    {name:'4Fukudaya Department Store',
+    para:'237 Imaizumicho, Utsunomiya City, Tochigi 321-0962',
+    mobile:'0172-35-6627'}
+    ]
+    const array5=[
+    {name:'5moodmaker',
+    para:'213-1 Yahata, Fujieda City, Shizuoka 426-0009 2F',
+    mobile:'0172-35-6627'},
+    {name:'5moodmaker',
+    para:'213-1 Yahata, Fujieda City, Shizuoka 426-0009 2F',
+    mobile:'0172-35-6627'},
+    {name:'5moodmaker',
+    para:'213-1 Yahata, Fujieda City, Shizuoka 426-0009 2F',
+    mobile:'0172-35-6627'}
+    ]
+
+
+  function myfunction(array,index)
+  {
+    var newarray=array.map(function(detail){
+        return "<tr><td>"+detail['name']+"</td><td>"+detail['para']+"</td><td>"+detail['mobile']+"</td></tr>";
+      });
+    document.getElementById("demo").innerHTML=newarray;
+    var cname=document.getElementsByClassName("btn");
+    for(i=0;i<cname.length;i++)
+    {
+      if(i==index)
+      {
+        document.getElementsByClassName("btn")[i].className +=" active";
+      }
+      else
+      {
+        document.getElementsByClassName("btn")[i].className ="btn";
+      }
+    }
+  }
+
+
+</script>
+
+
+    <div class="footer">
+      <div class="footercon">
+        <div class="footer1">
+          <div class="footerA">
+            <div>
+              <h2>NUIYA DESIGN Co.,Ltd.</h2>
+            </div><br>
+            <div>
+              <p>4-25-8-202, Arakawa, <br>Arakawa Ku, Tokyo To, 116-0002, Japan<br><br><a
+                  href="tel:03-6806-8433">03-6806-8433</a><br><a href="#">info@nunu-web.com</a><br><a
+                  href="#">https://nunu-web.com</a></p>
+            </div>
+            <div><i class="fab fa-facebook-square"></i> <i class="fab fa-instagram"></i></div>
+          </div>
+          <div class="footerB">
+            <div>
+              <h2>ABOUT US</h2>
+              <hr>
+              <div>
+                <ul>
+                  <li><a href="#">CONCEPT</a></li>
+                  <li><a href="#" target="_blank">ONLINE SHOP</a></li>
+                  <li><a href="#">SHOPLIST</a></li>
+                  <li><a href="#" target="_blank">BUYER URL</a></li>
+                  <li><a href="#">CONTACT</a></li>
+                  <li><a href="#">PRIVACY POLICY</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h2>COLLECTION</h2>
+              <hr>
+              <div class="collection">
+                <div>
+                  <ul>
+                    <li><a href="#">2021 S/S</a></li>
+                    <li><a href="#">2020 S/S</a></li>
+                    <li><a href="#">2019 S/S</a></li>
+                    <li><a href="#">2018 S/S</a></li>
+                    <li><a href="#">2017 S/S</a></li>
+                    <li><a href="#">2016 S/S</a></li>
+                    <li><a href="#">2015 S/S</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li><a href="#">2020 A/W</a></li>
+                    <li><a href="#">2019 A/W</a></li>
+                    <li><a href="#">2018 A/W</a></li>
+                    <li><a href="#">2017 A/W</a></li>
+                    <li><a href="#">2016 A/W</a></li>
+                    <li><a href="#">2015 A/W</a></li>
+                    <li><a href="#">2014 A/W</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h2>CONTENT</h2>
+              <hr>
+              <div>
+                <ul>
+                  <li><a href="#" target="_blank">FACEBOOK</a></li>
+                  <li><a href="#" target="_blank">INSTAGRAM</a></li>
+                  <li><a href="#">DOWNLOAD</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer2">
+          <p><a href="https://nunu-web.com/" title="" rel="home"><i class="far fa-copyright"></i> 2014-2021 NUIYA DESIGN
+              Co.,Ltd.</a></p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <script>
+
+  </script>
+</body>
+
+</html>

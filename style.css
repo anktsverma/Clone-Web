@@ -1,0 +1,283 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 16px;
+  }
+  a {
+    text-decoration: none;
+  }
+  i {
+    font-size: 1.5rem;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255,255,0.9);
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 0px;
+    position: fixed;
+    transition: 12s;
+  }
+  .header img {
+    width: 200px;
+  }
+  .header a {
+    color: #000;
+    padding: 5px;
+    font-family: "Dosis", sans-serif;
+    font-size: 1.1rem;
+    
+  }
+  .header a:hover{color:#818C90;}
+  .hamb{
+    display: none;
+  }
+  #desk1{
+    display: flex;
+  }
+  @media only screen and (max-width: 1156px){
+      .desk{
+        display: none;
+      }
+      .header{
+        
+        flex-direction:column;
+
+        
+      }
+  
+      .header a {
+        font-size: 1.5rem;
+        line-height:4rem;
+        text-align: center;
+
+        
+      }
+      .header img{width:30%;margin-left:40px;}
+      .header i{font-size:1.5rem;}
+      .hamb {
+        display: block;
+        color:black;
+        text-decoration: none;
+        cursor: pointer;
+        position:absolute;
+        top:-10px;
+        right:40px;
+        
+      }
+      .social{display:flex;justify-content: space-evenly;}
+      #desk1{
+        flex-direction: column;
+      }
+      .conceptcon{
+      width:70%;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items:center;
+  }
+  .slideshow img{width:360px;}
+  .footercon,.footer1,.footerB{
+    flex-direction: column;
+    align-items: space-between;
+    margin:10px 0px;
+  }
+  .footerB div{ margin:10px 0px;}
+  .news h2, .conceptcon h2{font-family: "Hiragino Kaku Gothic Pro", sans-serif;font-size:1.1rem;}
+  .conceptcon p{font-family: "Hiragino Kaku Gothic Pro", sans-serif;font-size:0.7rem;opacity: 0.8;line-height:4vh;text-align: justify;}
+  .footer2{padding:40px 0px 0px 0px;}
+  .footer2 p{
+      text-align: center;
+  }
+  .footer2 a{color:#fff;font-size:0.7rem;}
+  .footer2 i{font-size:0.7rem;}
+  .footerB{
+      display: flex;
+      width:50%;
+      justify-content: space-between;
+
+  }
+  }
+  .slideshow {
+    background: url("img/asset1.jpg") 50% 50% / cover repeat scroll
+      padding-box border-box rgba(0, 0, 0, 0);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: changebg;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    /* transform: translateY(2); */
+    animation-direction: alternate-reverse;
+  
+  }
+
+  .footer{
+      width:100%;
+      background-color: #262626;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+     font-family: "Hiragino Kaku Gothic Pro", メイリオ, sans-serif;
+      
+  }
+  li{list-style-type: none;line-height:4vh;}
+  .footer ul li a{color:#fff;font-size:0.8rem;}
+  .footerB h2{text-align: center;font-size:1.3rem;}
+  .footerA h2{font-size:1.3rem;}
+  .footerA p{font-size:0.9rem;line-height:3vh;}
+  .footerA a{color:#fff;}
+  .footerA i{padding:10px 10px 0px 0px;font-size:1.8rem;}
+  .footercon{
+      width:70%;
+      display: flex;
+      flex-direction: column;
+      padding:40px 0px;
+  }
+  .footer1{
+      display: flex;
+      justify-content: space-around;
+  }
+  .footer2{padding:40px 0px 0px 0px;}
+  .footer2 p{
+      text-align: center;
+  }
+  .footer2 a{color:#fff;font-size:0.8rem;}
+  .footer2 i{font-size:0.8rem;}
+  .footerB{
+      display: flex;
+      width:50%;
+      justify-content: space-between;
+
+  }
+  .footer a:hover{color:#907A7F;}
+  
+  .collection{display:flex;justify-content: space-between;}
+  @keyframes changebg {
+    0% {
+      background: url("img/asset1.jpg") 50% 50% / cover repeat scroll
+        padding-box border-box rgba(0, 0, 0, 0);
+    }
+    20% {
+      background: url("img/asset2.jpg") 50% 50% / cover repeat scroll
+        padding-box border-box rgba(0, 0, 0, 0);
+    }
+    40% {
+      background: url("img/asset3.jpg") 50% 50% / cover repeat scroll
+        padding-box border-box rgba(0, 0, 0, 0);
+    }
+    60% {
+      background: url("img/asset4.jpg") 50% 50% / cover repeat scroll
+        padding-box border-box rgba(0, 0, 0, 0);
+    }
+    80% {
+      background: url("img/asset5.jpg") 50% 50% / cover repeat scroll
+        padding-box border-box rgba(0, 0, 0, 0);
+    }
+    100% {
+      background: url("img/asset6.jpg") 50% 50% / cover repeat scroll
+        padding-box border-box rgba(0, 0, 0, 0);
+    }
+  }
+
+
+  .news{
+      width:100%;
+      display: flex;
+      justify-content: center;
+      padding:80px 0px;
+  }
+  .newscon{
+      width:70%;
+  }
+  .concept{
+      width:100%;
+      display: flex;
+      justify-content: center;
+      background-color: #D4D9DF;
+      padding: 20px 0px;
+  }
+  .conceptcon{
+      width:70%;
+      display: flex;
+      align-items:center;
+  }
+    
+  .img1{
+      width:300px;
+  }
+  .news h2, .conceptcon h2{font-family: "Hiragino Kaku Gothic Pro", sans-serif;font-size:1.3rem;}
+  .conceptcon p{font-family: "Hiragino Kaku Gothic Pro", sans-serif;font-size:0.9rem;opacity: 0.8;line-height:4.5vh;}
+  .carousel{
+      width:70%;
+      margin:0 15%;
+      padding:40px 0;
+  }
+  html {
+scroll-behavior: smooth;
+}
+
+
+/* Collection page css */
+.content{
+    display: flex;
+   justify-content: center;
+   height:700px;
+   align-items: center;
+   flex-direction: column;
+  }
+  .content h2{font-size: 1.6rem;margin:10px 0px;}
+ .collection-main{
+   display: flex;
+ }
+ .collection-container{
+   display:flex;
+   flex-direction: column;
+ }
+
+
+ button{padding:10px;margin:10px;border:none;background-color:#BFBEC5;font-size: 1.5rem;color:#fff; font-family: "Dosis", sans-serif;
+font-weight:bold}
+@media only screen and (max-width: 1156px){
+  button{font-size: 1rem;}
+.collection-main{
+   flex-direction: column;
+ }
+ .content{
+   height:1000px;
+  }
+  .content h2{font-size: 1.1rem;margin:10px 0px;}
+}
+
+/* collection ends */
+
+
+/* shop list */
+.shoplist{
+    display: flex;
+   justify-content: center;
+   height:600px;
+   align-items: center;
+   flex-direction: column;
+  }
+  .content h2{font-size: 1.6rem;margin:10px 0px;}
+  .active{background-color: black !important;}
+   .btn{border-radius: 5px;}
+   table{margin:20px 0px;width:70%;}
+   td{padding:10px;}
+  @media only screen and (max-width: 1156px){
+    table{width:96%;}
+    td{font-size:0.9rem;}
+  }
+/* shop list */

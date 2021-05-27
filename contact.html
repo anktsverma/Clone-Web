@@ -21,7 +21,32 @@
     <script src="main.js"></script>
     <title>Document</title>
     <style>
-     
+        label,input{
+            display: block;
+        }
+     .contact{
+         width:75%;
+         margin:0 auto;
+         display: flex;
+         flex-direction: column;
+         
+         justify-content: center;
+         height: 90vh;;
+
+
+     }
+     #submit{
+         padding: 15px;
+     }
+    
+     .contact div{
+         margin-top:15px;
+     }
+     input,textarea{
+         width:100%;
+         padding: 5px;
+     }
+
     </style>
   </head>
   <body>
@@ -41,33 +66,28 @@
             <i class="fa fa-bars" aria-hidden="true"></i>
           </a>
         </div>
-        
-      </div>
-
-      <div class="slideshow">
-        <div><img src="img/asset7.png" alt="" /></div>
-      </div>
-
-     <div class="news">
-         <div class="newscon">
-           <h2>NEWS</h2>
-         </div>
-     </div>
-    <div id="concept" class="concept">
-        <div class="conceptcon">
-             <div >
-                 <h2 >CONCEPT</h2>
-                <p><br>Japanese label“nunuforme”launched its first collection in 2014 guided by two key words :“fashionable and casual”.Its highly original patterns mean that you’ll see some truly unique cuts that are rarely used in children's fashion.<br>All the products are guaranteed for the best quality.<br>Size : 1Y – 9Y Ladies</p>
-             </div>
-             <div>
-               <img src="img/img1.jpg" alt="" class="img1">
-             </div>
+    
         </div>
-    </div>
-
-    <div class="sm-slide">
-      
-    </div>
+     
+        <div class="contact">
+            <div class="name">
+                <label for="Name">Name</label>
+                <input type="text">
+            </div>
+            <div class="email">
+                <label for="email">Email</label>
+                <input type="email" name="" id="">
+            </div>
+            <div class="title">
+                <label for="title">Title</label>
+                <input type="text">
+            </div>
+            <div class="message">
+                <label for="message">Message</label>
+                <textarea name="" id="" cols="35" rows="10"></textarea>
+            </div>
+            <div class="submit"><input id="submit" type="submit" value="submit"></div>
+        </div>
     
     <div class="footer">
         <div class="footercon">
